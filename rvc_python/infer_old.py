@@ -23,15 +23,16 @@ def infer_file(
     rms_mix_rate = 1,
     protect = 0.33,
     f0up_key = 0,
-    version = "v2"
+    version = "v2",
+    vc=None
 ):
-    lib_dir = os.path.dirname(os.path.abspath(__file__))
+    # lib_dir = os.path.dirname(os.path.abspath(__file__))
 
-    download_rvc_models(lib_dir)
-    config = Config(lib_dir,device)
-    vc = VC(lib_dir,config)
+    # download_rvc_models(lib_dir)
+    # config = Config(lib_dir,device)
+    # vc = VC(lib_dir,config)
 
-    vc.get_vc(model_path,version)
+    # vc.get_vc(model_path,version)
     wav_opt = vc.vc_single(
         sid=1,
         input_audio_path=input_path,
